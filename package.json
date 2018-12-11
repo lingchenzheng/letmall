@@ -1,0 +1,24 @@
+{
+    "name": "letmall",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "pro": "node app.js",
+        "dev": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "chalk": "^2.4.1",
+        "cookie-parser": "^1.4.3",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4",
+        "jsonwebtoken": "^8.4.0",
+        "multer": "^1.4.1",
+        "mysql": "^2.16.0",
+        "uuid": "^3.3.2"
+    }
+}

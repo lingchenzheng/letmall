@@ -1,8 +1,10 @@
 const config = require('../config/mysql.conf')
 const mysql = require('mysql')
 
+//创建数据库连接池
 const pool = mysql.createPool(config)
 
+//获取连接
 function getConnection(sql, success, fial) {
     pool.getConnection(function(err, con) {
         if (err) throw err
@@ -13,10 +15,11 @@ function getConnection(sql, success, fial) {
                 success(results, fields)
             }
         })
-        con.release()
+        con.release() //释放连接
     })
 }
 
+//插叙方法
 module.exports = async function(sql) {
     return new Promise((resolve, reject) => {
         getConnection(
